@@ -5,7 +5,7 @@ btn.addEventListener('click',()=>{
 
 if (!localStorage.getItem('user')) {
    window.location.href = 'signIn.html';
-   exit();
+    exit();
   }
 
 let workouts= [

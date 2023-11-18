@@ -4,8 +4,13 @@ if (!localStorage.getItem('user')) {
   }
 
 let userGoal =document.getElementById('userGoal')
-//userGoal.innerHTML=localStorage.getItem("goal")
+if(localStorage.getItem("goal")==2){
+userGoal.innerHTML='Gain Muscule'}
+else if(localStorage.getItem("goal")==3){
+  userGoal.innerHTML='Lose Weight'
+  
+}
 
 let userName=document.getElementById("user")
-//userName.innerHTML=localStorage.getItem("user")
+userName.innerHTML=localStorage.getItem("user")
 

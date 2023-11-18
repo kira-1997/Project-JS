@@ -113,9 +113,9 @@ let workouts= [
         })
           
     }
-  }
+  
  
-  if(localStorage.getItem("user")=="admin" ){
+if(localStorage.getItem("user")=="admin" ){
          let con=document.getElementById('con')
          let btn=document.createElement('button')
          btn.innerHTML='Delete';
@@ -125,6 +125,7 @@ let workouts= [
            deleteItem()
         })
   }
+}
   function deleteItem(){
         let workouts=document.querySelectorAll('.ex .card')
         workouts[workouts.length-1].parentNode.removeChild(workouts[workouts.length-1])

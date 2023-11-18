@@ -20,9 +20,8 @@ document.getElementById("btn").addEventListener("click", () => {
             error.textContent = "wrong password!";
           } else {
             error.style.display = "none"
-            localStorage.clear();
             localStorage.setItem("user", findUser.name)
-            window.location.href = "WeeklyPlan.html";
+            window.location.href = "WeekPlan.html";
         }
         }
       });

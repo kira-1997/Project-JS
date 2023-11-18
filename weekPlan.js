@@ -1,3 +1,8 @@
+let btn=document.getElementById('signOut')
+btn.addEventListener('click',()=>{
+  localStorage.clear()
+})
+
 if (!localStorage.getItem('user')) {
    window.location.href = 'signIn.html';
     exit();

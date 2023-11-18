@@ -1,6 +1,6 @@
 if (!localStorage.getItem('user')) {
-  //  window.location.href = 'signIn.html';
-  //  exit();
+   window.location.href = 'signIn.html';
+   exit();
   }
 
 let workouts= [

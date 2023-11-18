@@ -21,7 +21,7 @@ document.getElementById("btn").addEventListener("click", () => {
           } else {
             error.style.display = "none"
             localStorage.setItem("user", findUser.name)
-            window.location.href = "WeekPlan.html";
+            window.location.href = "weekPlan.html";
          }
         }
       });

@@ -129,12 +129,52 @@ if(localStorage.getItem("user")=="admin" ){
          btn.addEventListener('click',()=>{
            deleteItem()
         })
+        let btn1=document.createElement('button')
+         btn1.innerHTML='Add';
+         btn1.className='delete';
+         con.appendChild(btn1)
+         btn1.addEventListener('click',()=>{
+           addItem(Math.floor(Math.random()*(9-4+1)) + 4)
+
+        })
+
   }
 }
   function deleteItem(){
         let workouts=document.querySelectorAll('.ex .card')
         workouts[workouts.length-1].parentNode.removeChild(workouts[workouts.length-1])
      }
+  function addItem(index){
+   
+
+      fetch(`https://65524db75c69a7790329dc3e.mockapi.io/Workouts/${index}`)
+                .then((response) => response.json())
+                .then((data) =>{
+                let days=document.getElementById('days')
+                let col=document.getElementById('col')
+                let card=document.createElement('div')
+                card.className="card"
+                let pic=document.createElement('img')
+                pic.className='card-img-top'
+                pic.src=data.image
+                let cardBody=document.createElement('div')
+                cardBody.className='card-body'
+                let name=document.createElement('h5')
+                name.className='card-title'
+                name.innerHTML=data.name
+                let round=document.createElement('p')
+                round.className='card-text'
+                round.innerHTML=data.rounds 
+                cardBody.appendChild(name)
+                cardBody.appendChild(round)
+                card.appendChild(pic)
+                card.appendChild(cardBody)
+                col.appendChild(card)
+                days.appendChild(col)
+          })
+         
+  }
+
 
 
  myAPI()

@@ -41,7 +41,6 @@ document.getElementById("btn").addEventListener("click", () => {
       })
         .then((response) => response.json())
         .then((json) => (window.location.href = "SignIn.html"));
-         localStorage.clear();
          localStorage.setItem("goal", goal.value);
     }
   });

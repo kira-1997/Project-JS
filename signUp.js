@@ -40,7 +40,7 @@ document.getElementById("btn").addEventListener("click", () => {
         },
       })
         .then((response) => response.json())
-        .then((json) => (window.location.href = "SignIn.html"));
+        .then((json) => (window.location.href = "signIn.html"));
          localStorage.setItem("goal", goal.value);
     }
   });
